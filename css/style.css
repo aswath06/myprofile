@@ -7,55 +7,50 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #121212;
-    color: #fff;
-    line-height: 1.5; /* Add line spacing for better readability */
+    color: grey;
+    line-height: 1.5;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 50px; /* Adjusted padding for better responsiveness */
 }
 
 .logo {
     font-size: 2rem;
-    color: #ff4500; /* Orange logo color */
+    color: #ff4500;
 }
 
 nav ul {
-    list-style: none; /* Remove bullets */
-    display: flex; /* Align items in a row */
-    gap: 80px; /* Increase spacing between each menu item */
-}
-
-nav ul li {
-    margin: 0; /* Reset margins to avoid conflicts */
+    list-style: none;
+    display: flex;
+    gap: 50px; /* Adjusted spacing for responsiveness */
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #fff; /* White text */
-    font-size: 1.2rem; /* Slightly larger text size */
+    color: grey;
+    font-size: 1.1rem; /* Slightly smaller font size */
     transition: color 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #ff4500; /* Orange color on hover */
+    color: #ff4500;
 }
 
 .hire-me {
     background-color: #ff4500;
     color: #fff;
-    padding: 10px 30px; /* Increase padding for a larger button */
+    padding: 8px 20px; /* Reduced padding for smaller buttons */
     border: none;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
-    border-radius: 10px; /* Increase border-radius for a more rounded look */
-    font-size: 1.2rem; /* Optional: Increase font size for better visibility */
-    min-width: 150px; /* Set a minimum width for consistency */
+    border-radius: 10px;
+    font-size: 1rem; /* Smaller font size */
+    min-width: 130px; /* Reduced width for better responsiveness */
 }
-
 
 .hire-me:hover {
     background-color: #ff6500;
@@ -63,113 +58,132 @@ nav ul li a:hover {
 
 .container {
     display: flex;
+    flex-wrap: wrap; /* Allow content to wrap for smaller screens */
     justify-content: space-between;
     align-items: center;
     padding: 50px;
 }
 
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .intro {
     flex: 1;
-    padding-right: 50px;
+    padding-right: 20px;
+    animation: slideInFromLeft 1s ease-out;
     text-align: left;
 }
 
 .intro h2 {
-    font-size: 1.5rem;
-    color: #777; /* Light gray for subheading */
-    margin-top: 30px; /* Add more space above "Hi I am" */
+    font-size: 1.4rem;
+    color: #777;
 }
 
 .intro h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 10px 0;
 }
 
 .intro h3 {
-    font-size: 2.7rem;
+    font-size: 2.2rem;
     color: #ff4500;
     margin-bottom: 30px;
 }
 
 .social-icons {
     display: flex;
-    gap: 20px; /* Increase gap between icons */
-    margin-top: 40px; /* Add gap above the entire group */
-    margin-bottom: 40px; /* Add gap below the entire group */
+    gap: 15px; /* Adjust gap for smaller screens */
+    margin: 30px 0;
 }
-
 
 .social-icons a {
     color: #777;
-    font-size: 1.5rem;
+    font-size: 1rem;
     transition: color 0.3s, transform 0.2s;
-    border: 2px solid #ff4500; /* Add border with desired color */
-    border-radius: 50%; /* Make the border circular */
-    padding: 10px; /* Add padding to create space around the icon */
-    display: inline-flex; /* Use inline-flex to center the icon */
-    align-items: center; /* Center the icon vertically */
-    justify-content: center; /* Center the icon horizontally */
-    margin-bottom: 10px; /* Add a gap below each icon */
+    border: 2px solid grey;
+    border-radius: 50%;
+    padding: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
-
 
 .social-icons a:hover {
     color: #ff4500;
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(1.1);
 }
-
 
 .buttons {
     display: flex;
-    gap: 30px; /* Increase gap between buttons */
+    gap: 20px; /* Adjust gap for smaller screens */
 }
 
 .download-cv {
     background-color: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-    padding: 10px 30px; /* Increase padding for a larger button */
+    border: 2px solid grey;
+    color: grey;
+    padding: 8px 20px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-    border-radius: 10px; /* Set border-radius for a more rounded look */
-    font-size: 1.2rem; /* Optional: Increase font size for better visibility */
-    min-width: 150px; /* Set a minimum width for consistency */
+    border-radius: 10px;
+    font-size: 1rem;
+    min-width: 130px;
 }
 
 .download-cv:hover {
     background-color: #fff;
     color: #121212;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-
 
 .stats {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .stat-box {
-    margin-top: 40px; 
+    margin-top: 30px;
     text-align: left;
-    background-color: #333; /* Grey background color */
-    padding: 20px; /* Add some padding */
+    background-color: #333;
+    padding: 20px;
+    margin-right: 20px;
 }
 
-
 .stat-box h4 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #ff4500;
 }
 
 .stat-box p {
-    color: #777;
+    color: white;
 }
 
-/* Right Side Image */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .image-container {
     flex: 1;
     text-align: right;
+    animation: slideInFromRight 1s ease-out;
+    max-width: 100%;
 }
 
 .designer-image {
@@ -178,7 +192,106 @@ nav ul li a:hover {
     border-radius: 8px;
 }
 
-/* Add spacing between sections */
 section {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul {
+        gap: 30px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .intro {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .image-container {
+        text-align: center;
+    }
+
+    .stats {
+        justify-content: center;
+    }
+
+    .stat-box {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .hire-me, .download-cv {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        min-width: 110px;
+    }
+
+    .intro h1 {
+        font-size: 2rem;
+    }
+
+    .intro h3 {
+        font-size: 1.8rem;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .stat-box h4 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro h1 {
+        font-size: 1.6rem;
+    }
+
+    .intro h3 {
+        font-size: 1.4rem;
+    }
+
+    .stat-box h4 {
+        font-size: 1.2rem;
+    }
+
+    .stat-box {
+        padding: 10px;
+    }
+
+    .hire-me, .download-cv {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    .social-icons a {
+        font-size: 0.8rem;
+        padding: 4px;
+    }
 }
