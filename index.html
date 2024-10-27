@@ -7,15 +7,6 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <style>
-        /* Additional styles for the fallback text */
-        .fallback-text {
-            font-size: 1.5em; /* Adjust the font size as needed */
-            color: #777; /* Change color for visibility */
-            text-align: center;
-            margin: 20px 0; /* Margin for spacing */
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -67,8 +58,7 @@
         </section>
 
         <section class="image-container">
-            <img src="./assets/images/Person2.png" alt="Aswath" class="designer-image" onerror="this.style.display='none'; document.getElementById('fallback').style.display='block';">
-            <div id="fallback" class="fallback-text" style="display:none;">Image not available</div>
+            <img src="./assets/images/Person2.png" alt="Aswath" class="designer-image" onerror="this.onerror=null; this.src='https://img.freepik.com/premium-photo/professional-photo-linkedin-profile-picture-handsome-looking-man-light-color-background_1078199-10788.jpg';">
         </section>
     </main>
 
