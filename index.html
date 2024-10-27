@@ -14,7 +14,7 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="#">About me</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact me</a></li>
@@ -22,25 +22,25 @@
         </nav>
         <button class="hire-me">Hire Me</button>
     </header>
-    
+
     <main class="container">
         <section class="intro">
-            <h2>Hi I am</h2>
+            <h2>Hi, I am</h2>
             <h1>Aswath</h1>
-            <h3>Mobile development / DevOps</h3>
+            <h3>Mobile Developer / DevOps</h3>
             <div class="social-icons">
-                <a href="https://www.instagram.com/aswath.06?igsh=MTc1M2E5d3AxbDdzeg%3D%3D&utm_source=qr" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
+                <a href="https://www.instagram.com/aswath.06?igsh=MTc1M2E5d3AxbDdzeg%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/aswath-m-85ab762a2/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/aswath06"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-behance"></i></a>
+                <a href="https://github.com/aswath06" target="_blank"><i class="fab fa-github"></i></a>
             </div>
-            
+
             <div class="buttons">
                 <button class="hire-me">Hire Me</button>
-                <button class="download-cv">Download CV</button>
+                <a href="https://drive.google.com/file/d/18_mBz1xkiZEBW-SxkGNr47J3Jnkk-Tsr/view?usp=sharing" target="_blank" class="download-cv">
+                    <button>Download CV</button>
+                </a>
             </div>
+
             <section class="stats">
                 <div class="stat-box">
                     <h4>5+</h4>
@@ -56,13 +56,57 @@
                 </div>
             </section>
         </section>
+
         <section class="image-container">
-            <img src="./assets/images/Person2.png" alt="Mahmood Fazile" class="designer-image">
+            <img src="./assets/images/Person2.png" alt="Aswath" class="designer-image">
         </section>
     </main>
-    
+
+    <!-- New Skills Section -->
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <h3>React Native</h3>
+            <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+        </div>
+        <div class="skill">
+            <h3>Flutter</h3>
+            <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill">
+            <h3>UI/UX Design</h3>
+            <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+        </div>
+    </section>
+
+    <!-- New Testimonials Section -->
+    <section class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial">
+                <p>"Aswath's design skills are exceptional, and his attention to detail made our app outstanding!"</p>
+                <h4>John Doe, CEO of Company</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Professional and reliable, delivered the project on time with great quality."</p>
+                <h4>Jane Smith, Project Manager</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Contact Section -->
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
     <footer>
-        <!-- Footer content goes here -->
+        <p>&copy; 2024 Aswath's Portfolio. All rights reserved.</p>
     </footer>
 </body>
 </html>
