@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aswath's Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #1a1a1a; /* Dark background */
+            color: #f0f0f0; /* Light text color */
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333; /* Dark header and footer */
+            color: white;
+        }
+
+        header nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a, .hire-me {
+            color: white;
+            text-decoration: none;
+            font-weight: bold; /* Bold links */
+        }
+
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 30px 20px;
+            scroll-snap-type: x mandatory;
+            justify-content: center;
+        }
+
+        .scroll-container::-webkit-scrollbar {
+            display: none; /* Hide scrollbar */
+        }
+
+        .container {
+            flex: 0 0 auto;
+            width: 300px;
+            text-align: center;
+            background-color: #2a2a2a; /* Dark background for cards */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Darker shadow */
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            scroll-snap-align: center;
+            transform: scale(0.95);
+        }
+
+        .container:hover {
+            transform: scale(1);
+            background-color: #3a3a3a; /* Slightly lighter on hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+        }
+
+        .attitude-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .description h3 {
+            color: #f0f0f0; /* Light text color */
+            margin: 10px 0; /* Add margin for spacing */
+            font-weight: bold; /* Bold title */
+        }
+
+        .title-container {
+            text-align: center;
+            margin: 30px 0; /* Spacing around the title */
+        }
+
+        .title-container h2 {
+            font-size: 24px; /* Increase title size */
+            color: #f0f0f0; /* Light color for title */
+            text-transform: uppercase; /* Uppercase for emphasis */
+            letter-spacing: 2px; /* Space between letters */
+            margin: 0; /* Remove default margin */
+        }
+
+        .title-container p {
+            color: #cccccc; /* Lighter color for subtitle */
+            font-size: 16px; /* Subtitle size */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">LOGO</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact me</a></li>
+            </ul>
+        </nav>
+        <button class="hire-me">Hire Me</button>
+    </header>
+
+    <div class="title-container">
+        <h2>My Attitude</h2>
+    </div>
+
+    <!-- Scrollable horizontal container -->
+    <div class="scroll-container">
+        <!-- Image containers -->
+        <a href="https://forms.gle/ajARBcr2sYXuGvJm7" target="_blank" class="container">
+            <img src="./assets/images/Aptitude.jpeg" alt="Attitude Image 1" class="attitude-image">
+            <div class="description">
+                <h3>Attitude Image 1</h3>
+            </div>
+        </a>
+        <a href="https://forms.gle/ajARBcr2sYXuGvJm7" target="_blank" class="container">
+            <img src="./assets/images/Aptitude.jpeg" alt="Attitude Image 2" class="attitude-image">
+            <div class="description">
+                <h3>Attitude Image 2</h3>
+            </div>
+        </a>
+        <a href="https://forms.gle/ajARBcr2sYXuGvJm7" target="_blank" class="container">
+            <img src="./assets/images/Aptitude.jpeg" alt="Attitude Image 3" class="attitude-image">
+            <div class="description">
+                <h3>Attitude Image 3</h3>
+            </div>
+        </a>
+        <a href="https://forms.gle/ajARBcr2sYXuGvJm7" target="_blank" class="container">
+            <img src="./assets/images/Aptitude.jpeg" alt="Attitude Image 4" class="attitude-image">
+            <div class="description">
+                <h3>Attitude Image 4</h3>
+            </div>
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; <a href="test.html" target="_blank">2024</a> Aswath's Portfolio. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Center the scroll position on load
+        window.addEventListener('load', () => {
+            const scrollContainer = document.querySelector('.scroll-container');
+            const firstContainer = document.querySelector('.container');
+            scrollContainer.scrollLeft = firstContainer.offsetLeft - (scrollContainer.offsetWidth / 2) + (firstContainer.offsetWidth / 2);
+        });
+    </script>
+</body>
+</html>

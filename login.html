@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Aswath's Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Colorful gradient background */
+        }
+
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            width: 350px;
+            text-align: center; /* Center align text */
+            animation: fadeIn 1s ease-in; /* Fade-in animation */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333; /* Dark color for header */
+            animation: slideIn 0.5s ease-out; /* Slide-in animation for heading */
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9; /* Light background for inputs */
+            font-size: 16px; /* Increase font size */
+            transition: all 0.3s; /* Smooth transition for border and background */
+        }
+
+        .login-container input:focus {
+            border-color: #ff7e5f; /* Color change on focus */
+            outline: none; /* Remove outline */
+            background-color: #fff; /* Change background color on focus */
+            box-shadow: 0 0 5px rgba(255, 126, 95, 0.5); /* Shadow effect on focus */
+        }
+
+        .login-container button {
+            padding: 15px;
+            width: 100%;
+            border: none;
+            background-color: #ff7e5f; /* Colorful button */
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Add transition for button */
+            font-weight: bold; /* Make button text bold */
+            font-size: 16px; /* Increase button text size */
+            animation: buttonBounce 0.5s ease-in-out infinite alternate; /* Bounce animation */
+        }
+
+        @keyframes buttonBounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-5px); }
+        }
+
+        .login-container button:hover {
+            background-color: #feb47b; /* Change button color on hover */
+        }
+
+        .login-container p {
+            color: red;
+            display: none; /* Hide error message initially */
+            margin-top: 10px; /* Space above error message */
+            animation: fadeIn 0.5s ease-in; /* Fade-in animation for error message */
+        }
+
+        .login-container a {
+            margin-top: 15px;
+            text-decoration: none;
+            color: #007BFF; /* Link color */
+        }
+
+        .login-container a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container" id="loginContainer">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+        <p id="errorMessage">Invalid username or password</p>
+        <a href="#">Forgot Password?</a> <!-- Link for forgot password -->
+    </div>
+
+    <script>
+        // JSON object containing usernames and passwords
+        const users = {
+            "aswath": "881288",
+            "litisha": "997662"
+            // Add more users as needed
+        };
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Check if the username exists and the password matches
+            if (users[username] && users[username] === password) {
+                // Redirect to portfolio page on successful login
+                window.location.href = 'test.html';
+            } else {
+                errorMessage.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

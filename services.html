@@ -6,58 +6,30 @@
     <title>Services | Aswath's Portfolio</title>
     <link rel="stylesheet" href="./css/style.css">
     <style>
-        /* Add this style for the rectangular container */
-        .container {
-            display: flex; /* Use flexbox for layout */
-            flex-direction: column; /* Stack items vertically */
-            align-items: center; /* Center items horizontally */
-            margin: 20px auto; /* Center the container */
-            padding: 20px; /* Space inside the container */
-            background-color: #f7f7f7; /* Background color */
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
-            max-width: 300px; /* Match the maximum width to the image */
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background and scale */
-            text-decoration: none; /* Remove underline from link */
-            color: inherit; /* Inherit text color from parent */
+        body {
+            font-family: Arial, sans-serif;
         }
 
-        .container:hover {
-            background-color: #e0e0e0; /* Change background on hover */
-            transform: scale(1.05); /* Slightly enlarge container on hover */
+        header, footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
         }
 
-        .attitude-image {
-            width: 100%; /* Full width of the container */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 8px; /* Rounded corners for images */
-            margin-bottom: 15px; /* Space below the image */
-            transition: transform 0.3s ease; /* Smooth transition for image scale */
+        header nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
         }
 
-        .container:hover .attitude-image {
-            transform: scale(1.1); /* Slightly enlarge image on hover */
+        header nav ul li {
+            margin: 0 10px;
         }
 
-        .description {
-            text-align: center; /* Center text below the image */
-        }
-
-        .description h3, .description p {
-            transition: color 0.3s ease; /* Smooth transition for text color */
-        }
-
-        .container:hover .description h3,
-        .container:hover .description p {
-            color: #333; /* Change text color on hover */
-        }
-
-        .description h3 {
-            color: #555; /* Initial color for heading */
-        }
-
-        .description p {
-            color: #777; /* Initial color for paragraph */
+        header nav ul li a, .hire-me {
+            color: white;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -76,18 +48,8 @@
         <button class="hire-me">Hire Me</button>
     </header>
 
-    <!-- Make the main container a link -->
-    <a href="https://forms.gle/ajARBcr2sYXuGvJm7" target="_blank" class="container">
-        <!-- Display Image -->
-        <img src="./assets/images/Aptitude.jpeg" alt="Attitude Image 1" class="attitude-image">
-        <div class="description">
-            <h3>Attitude Image 1</h3>
-            <p>Short description or caption for this image.</p>
-        </div>
-    </a>
-
     <footer>
-        <p>&copy; 2024 Aswath's Portfolio. All rights reserved.</p>
+        <p>&copy; <a href="login.html">2024</a> Aswath's Portfolio. All rights reserved.</p>
     </footer>
 </body>
 </html>
